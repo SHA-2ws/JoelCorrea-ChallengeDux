@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+
+import { PrimeReactProvider } from 'primereact/api';
+
+import NavBar from "@/components/NavBar";
+import MenuBar from "@/components/MenuBar";
+import { UserStoreProvider } from "@/store/UserContext";
+
 import "./globals.css";
+import 'primereact/resources/themes/lara-light-blue/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,8 +37,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <PrimeReactProvider>
+          <NavBar />
+          <MenuBar />
+            <UserStoreProvider>
+            {children}
+          </UserStoreProvider>
+        </PrimeReactProvider>
       </body>
     </html>
   );

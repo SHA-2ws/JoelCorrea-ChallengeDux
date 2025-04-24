@@ -34,3 +34,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+-[x] Crear view inicial para Listar usuarios. (creacion de vista, implementar PrimeReact en Layout principal, creación de servicio, solicitud de data en componente server side, guardar la data en un estado local, crear componentes)
+-[x] Crear modal para creación y edición de usuarios. (crear un modal con un form reutilizable para creacion y edicion, uso de params, persistir data en estado y actualizar data)
+-[x] Editar usuarios.
+-[x]Eliminar usuarios.  
+-[X] Buscar por nombre o apellido por coincidencia.
+-[x] Filtrar por el estado del usuario (activo/inactivo).
+-[x]Paginado de registros utilizando _limit & _page (documentación de json-server).
